@@ -1,0 +1,70 @@
+//first checpoint
+
+const setNum1 = [1, 2, 3, 4, 5];
+const setNum2 = [4, 5, 6, 7, 8];
+
+const combinedSet = [...setNum1, ...setNum2];
+
+function sumOfTwoSet(combinedSet){
+    let sumOfDistinct = 0;
+    for (i = 0; i < combinedSet.length; i++){
+        sumOfDistinct += combinedSet[i];
+    }
+    return sumOfDistinct;
+}
+console.log(sumOfTwoSet(combinedSet));
+
+//second checkpoint
+
+Inputs: n (number of vector pairs), v1, v2 (vectors of IR)
+
+start
+
+dot_product(v1, v2)
+
+1.1.  ps = 0 (initialize the dot product to zero)
+1.2. loop through i = 0 to length(v1) - 1 do
+1.2.1. Set ps = ps + (v1[i] * v2[i]) (calculate the dot product)
+1.3. Return ps
+
+Set orthogonalCount = 0 (initialize the count of orthogonal vector pairs to zero)
+
+For i = 1 to n do (iterate over each vector pair)
+3.1. Read vector v1
+3.2. Read vector v2
+3.3. Call dot_product(v1, v2) and store the result in variable ps
+3.4. If ps equals 0, then
+3.4.1. Print "Vector pair", i, "is orthogonal." (v1 and v2 are orthogonal)
+3.4.2. Increment orthogonalCount by 1
+3.5. Else
+3.5.1. Print "Vector pair", i, "is not orthogonal." (v1 and v2 are not orthogonal)
+
+Print "Total orthogonal vector pairs found:", orthogonalCount
+
+The above algorithm checks the orthogonality of n pairs of vectors by calling the dot_product procedure. If the dot product of two vectors is zero, it means the vectors are orthogonal. The algorithm keeps track of the count of orthogonal vector pairs and prints the results accordingly.
+
+If you need to use a dot_product function instead of a procedure, you can modify the algorithm as follows:
+
+Algorithm: CheckOrthogonalityWithFunction
+Inputs: n (number of vector pairs), v1, v2 (vectors of IR)
+Outputs: None
+
+Function dot_product(v1, v2)
+1.1. Set ps = 0 (initialize the dot product to zero)
+1.2. For i = 0 to length(v1) - 1 do
+1.2.1. Set ps = ps + (v1[i] * v2[i]) (calculate the dot product)
+1.3. Return ps
+
+Set orthogonalCount = 0 (initialize the count of orthogonal vector pairs to zero)
+
+For i = 1 to n do (iterate over each vector pair)
+3.1. Read vector v1
+3.2. Read vector v2
+3.3. Set ps = dot_product(v1, v2)
+3.4. If ps equals 0, then
+3.4.1. Print "Vector pair", i, "is orthogonal." (v1 and v2 are orthogonal)
+3.4.2. Increment orthogonalCount by 1
+3.5. Else
+3.5.1. Print "Vector pair", i, "is not orthogonal." (v1 and v2 are not orthogonal)
+
+Print "Total orthogonal vector pairs found:", orthogonalCount
