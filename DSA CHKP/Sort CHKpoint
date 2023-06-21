@@ -1,0 +1,11 @@
+Here's a step-by-step explanation of how Insertion Sort works:
+
+Start with the second element (i = 1) and consider it as the "key" element.
+Compare the key element with the elements before it (from i-1 down to 0) in the sorted portion of the array.
+If an element before the key is greater than the key, shift that element to the right to make room for the key.
+Repeat step 3 until you find the correct position to insert the key.
+Insert the key element into its correct position in the sorted portion of the array.
+Repeat steps 1-5 for the remaining elements (i = 2 to n-1) in the array.
+By iteratively inserting each element into the sorted portion of the array, Insertion Sort gradually builds a sorted array. At each step, the sorted portion of the array keeps growing, until all the elements are in their correct sorted positions.
+
+Insertion Sort has an average case time complexity of O(n^2), where n is the number of elements in the array. It performs well for small input sizes or partially sorted arrays but becomes less efficient compared to other algorithms like Quick Sort or Merge Sort for larger arrays.
