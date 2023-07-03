@@ -1,0 +1,3 @@
+Opposite Name: IsNotPalindrome
+Opposite Description:
+Determine if a word is not a palindrome. A word is not a palindrome if it cannot be read the same way from left to right and right to left. This can be done by comparing the characters located at the ends of the word. If there is a difference, we can conclude that the word is not a palindrome. The stop condition is when the word is empty or contains a single character, as these cases are not considered palindromes.
